@@ -72,9 +72,10 @@ contract CertificateContract {
 
     mapping(address=>uint) public eval;
     event Log(address indexed sender,uint indexed val);
-    function evaluation(uint8 x) external {                                                     //evaluation
+    function evaluation(uint8 x) external {                                                     
         require(x<6&&x>0);
         emit Log(msg.sender,x);
         eval[msg.sender] = x;
     }
+
 }
